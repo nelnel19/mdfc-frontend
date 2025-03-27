@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400&display=swap');
+
+.container {
+    width: 100%;
+    min-height: 70vh; /* Reduced height for the welcome section */
+    background: url('/public/images/bg9.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Reduced padding for better spacing */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Semi-transparent overlay */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Transparent Box */
+.transparentBox {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px; /* Reduced padding for better spacing */
+    border-radius: 12px;
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 90px; /* Reduced margin for better alignment */
+}
+
+/* Content */
+.textContent {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+/* Heading */
+.heading {
+    font-size: 28px; /* Slightly reduced font size */
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-bottom: 15px; /* Added margin for spacing */
+}
+
+/* Description */
+.description, .featureText {
+    font-size: 14px; /* Slightly reduced font size */
+    font-family: 'Roboto', sans-serif;
+    color: #ddd;
+    margin-bottom: 15px; /* Reduced margin for spacing */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* CTA Button */
+.ctaButton {
+    background: #ff7043;
+    color: white;
+    border: none;
+    padding: 10px 18px; /* Slightly reduced padding */
+    font-size: 14px; /* Slightly reduced font size */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 100%; /* Full width for better mobile responsiveness */
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.ctaButton:hover {
+    background: #e64a19;
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduced gap for better spacing */
+    margin-top: 15px; /* Reduced margin for spacing */
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Reduced gap for better spacing */
+    font-size: 14px; /* Slightly reduced font size */
+}
+
+/* Ensuring feature text is white */
+.featureText {
+    color: white;
+}
+
+/* Social Icons */
+.socialIcons {
+    display: flex;
+    gap: 12px; /* Reduced gap for better spacing */
+    margin-top: 15px; /* Reduced margin for spacing */
+    justify-content: center;
+}
+
+.socialIcons a {
+    font-size: 20px; /* Slightly reduced icon size */
+    color: white;
+    transition: 0.3s;
+}
+
+.socialIcons a:hover {
+    color: #ff7043;
+}
+
+/* Video Section */
+.videoSection {
+    width: 100%;
+    min-height: 100vh; /* Full height for the video section */
+    background: url('/public/images/bg9.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.videoSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.videoHeading {
+    font-size: 28px; /* Slightly reduced font size */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Video Container */
+.videoContainer {
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    margin-top: 150px;
+}
+
+.videoContainer:hover {
+    transform: scale(1.02);
+}
+
+.video {
+    width: 70%; /* Full width for responsiveness */
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Watch Video Button */
+.videoButton {
+    background: white;
+    color: #e64a19;
+    border: 2px solid white;
+    padding: 10px 20px; /* Slightly reduced padding */
+    font-size: 14px; /* Slightly reduced font size */
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 15px; /* Reduced margin for spacing */
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+    width: 100%; /* Full width for better mobile responsiveness */
+}
+
+.videoButton:hover {
+    background: #e64a19;
+    color: white;
+    border-color: #e64a19;
+}
+.motto {
+    font-size: 1.2rem;
+    font-style:oblique;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }

@@ -1,0 +1,428 @@
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Table container with gradient background */
+.tableContainer {
+  background: linear-gradient(135deg, #FFD89B, #FFB06A, #FF9F45); /* Light Orange Gradient */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 150px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 0.6s ease-in-out forwards;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 0.3s forwards;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  color: #4A2C0A; /* Dark Brown for contrast */
+}
+
+/* Row animations */
+.table tr {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease-in-out forwards;
+}
+
+/* Stagger animation for each row */
+.table tr:nth-child(1) { animation-delay: 0.2s; }
+.table tr:nth-child(2) { animation-delay: 0.3s; }
+.table tr:nth-child(3) { animation-delay: 0.4s; }
+.table tr:nth-child(4) { animation-delay: 0.5s; }
+
+/* Hover effect for table rows */
+.table tr:hover {
+  background: rgba(255, 160, 80, 0.3);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Profile Image */
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profileImage:hover {
+  transform: scale(1.1);
+}
+
+/* Button Styling */
+.editBtn {
+  background-color: #FF8C42;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.editBtn:hover {
+  background-color: #FFAA70;
+  transform: scale(1.05);
+}
+
+/* Modal Animations */
+@keyframes fadeInScale {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Input Fields */
+.modalContent input,
+.modalContent select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button Styles */
+.updateBtn, .cancelBtn {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.updateBtn {
+  background-color: #008CBA;
+  color: white;
+}
+
+.cancelBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+.updateBtn:hover {
+  background-color: #007bb5;
+  transform: scale(1.05);
+}
+
+.cancelBtn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tableContainer {
+      width: 95%;
+  }
+}
+.downloadBtn {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.downloadBtn:hover {
+  background-color: #007bb5;
+  transform: scale(1.05);
+}
+/* Export Container */
+.exportContainer {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* Export Button */
+.exportBtn {
+  background-color: #008CBA; /* Blue color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.exportBtn:hover {
+  background-color: #43b8ee; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+/* PDF Icon */
+.pdfIcon {
+  font-size: 18px;
+}
+.exportContainer {
+  margin-bottom: 20px; /* Add some space below the button */
+  text-align: right; /* Align the button to the right */
+}
+
+.exportBtn {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.exportBtn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+.deactivateBtn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.reactivateBtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+/* Add this to your users.module.css */
+.filterContainer {
+  margin-top: 100px; /* Add space below the Navbar */
+  margin-bottom: 20px; /* Add space above the table */
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.filterContainer button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filterContainer button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.filterContainer button {
+  margin-right: 10px; /* Space between buttons */
+}
+
+.exportContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.tableContainer {
+  margin-top: 20px; /* Adjust as needed */
+}
+.container {
+  padding: 20px;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filterContainer button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.filterContainer button:hover {
+  background-color: #0056b3;
+}
+
+.exportBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.exportBtn:hover {
+  background-color: #218838;
+}
+
+.tableContainer {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.editBtn,
+.archiveBtn,
+.deactivateBtn,
+.reactivateBtn {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editBtn {
+  background-color: #ffc107;
+  color: black;
+}
+
+.archiveBtn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.deactivateBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.reactivateBtn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}

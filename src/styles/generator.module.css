@@ -1,0 +1,268 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Main Container */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out;
+    position: relative; /* Ensure the background div is positioned relative */
+}
+
+/* Background image outside container */
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/public/images/bbgg3.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Make sure the background stays behind the content */
+}
+
+/* Animation for Page Load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Uploading Container */
+.container {
+    background: #fff; /* Remove transparent background and give a solid color */
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 170px;
+}
+
+/* Upload Options */
+.uploadOptions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.uploadBox {
+    position: relative;
+    border: 2px dashed #ff8c00;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1;
+}
+
+/* Hover Effect */
+.uploadBox:hover {
+    background: rgba(255, 100, 50, 0.15);
+}
+
+.uploadBox input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.uploadText {
+    font-size: 14px;
+    color: #444;
+    margin-top: 5px;
+}
+
+/* Preview Section */
+.previewContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.preview {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 2px solid #ff8c00;
+}
+
+/* Analyze Button */
+.analyzeBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #639ee7;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.analyzeBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.analyzeBtn:hover:not(:disabled) {
+    background: #e67300;
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    animation: popIn 0.3s ease-in-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Close Button */
+.closeBtn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #666;
+    transition: color 0.2s ease;
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeBtn:hover {
+    color: #222;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+/* Results */
+.resultsContainer {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.resultItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.checkIcon {
+    color: orange;
+}
+
+/* Medication Button */
+.medicationBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #639ee7;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.medicationBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.medicationBtn:hover:not(:disabled) {
+    background: #e67300;
+}
+
+.pillIcon {
+    margin-right: 8px;
+    color: white;
+}
+
+/* Instructions Section */
+.instructions {
+    font-size: 12px;
+    color: #555;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.instructions h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.instructions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.instructions li {
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.instructions li::before {
+    content: "•";
+    color: #ff8c00;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}

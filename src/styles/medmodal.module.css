@@ -1,0 +1,298 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+/* Main Container */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffe0b2, #ffcc80);
+    font-family: 'Quicksand', sans-serif;
+    color: #5a3e1b;
+}
+
+/* Uploading Container */
+.container {
+    background: linear-gradient(135deg, #fff4e5, #ffe0b2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 550px;
+    width: 90%;
+    margin-left: 170px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Upload Options */
+.uploadOptions {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.uploadBox {
+    position: relative;
+    border: 2px dashed #ff9f43;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1;
+    background: #fff;
+}
+
+.uploadBox:hover {
+    background: rgba(255, 159, 67, 0.1);
+    transform: translateY(-5px);
+}
+
+.uploadBox input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.uploadIcon {
+    font-size: 32px;
+    color: #ff9f43;
+}
+
+.uploadText {
+    font-size: 15px;
+    color: #5a3e1b;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Preview Section */
+.previewContainer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.preview {
+    width: 100%;
+    max-height: 360px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 3px solid #ff9f43;
+}
+
+.analyzeBtn {
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff9f43, #ff6b6b);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.analyzeBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.analyzeBtn:hover:not(:disabled) {
+    background: linear-gradient(to right, #ff6b6b, #ff9f43);
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal {
+    background: #fff;
+    width: 95%;
+    max-width: 1200px;
+    height: 85vh;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    position: relative;
+    overflow-y: auto;
+    border: 2px solid #ff9f43;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: popIn 0.5s ease-in-out;
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Close Button */
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.closeBtn:hover {
+    background: #d63030;
+}
+
+/* Header Styling */
+h2, h3 {
+    margin-bottom: 18px;
+    color: #5a3e1b;
+    font-weight: 600;
+    border-bottom: 3px solid #ff9f43;
+    display: inline-block;
+    padding-bottom: 6px;
+    text-align: center;
+    width: auto;
+}
+
+/* Description */
+.diseaseDescription {
+    font-size: 17px;
+    color: #5a3e1b;
+    margin-bottom: 22px;
+    padding: 14px;
+    background: #fff7e6;
+    border-radius: 10px;
+    border: 1px solid #ffcc80;
+    width: 85%;
+}
+
+/* Lists */
+.tipsList, .productList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 85%;
+}
+
+.tipItem, .productItem {
+    background: #ffecd6;
+    margin: 8px 0;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    border-left: 5px solid #ff9f43;
+    transition: all 0.3s;
+}
+
+.tipItem:hover, .productItem:hover {
+    background: #ffe0b2;
+    transform: translateX(8px);
+}
+
+/* Image Grid */
+.imageGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    width: 85%;
+    justify-content: center;
+}
+
+.diseaseImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #ffcc80;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.diseaseImage:hover {
+    transform: scale(1.1);
+    border-color: #ff9f43;
+}
+
+/* Buttons */
+.medicationBtn {
+    background: linear-gradient(to right, #ff9f43, #ff6b6b);
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    font-size: 17px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    margin-top: 25px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.medicationBtn:hover {
+    background: linear-gradient(to right, #ff6b6b, #ff9f43);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .uploadOptions {
+        flex-direction: column;
+    }
+
+    .uploadBox {
+        padding: 16px;
+    }
+
+    .modal {
+        width: 95%;
+        height: 90vh;
+    }
+}

@@ -1,0 +1,43 @@
+/* Routine Modal Styles */
+.routine-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .routine-modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+  }
+  
+  .routine-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .routine-modal h2 {
+    margin-top: 0;
+  }
+  
+  .routine-modal ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .routine-modal li {
+    margin: 5px 0;
+  }
+  

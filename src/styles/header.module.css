@@ -1,0 +1,73 @@
+/* HEADER STYLING */
+/* More transparent header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05); /* Increased transparency */
+    backdrop-filter: blur(5px); /* Reduced blur for a clearer background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Increased logo size */
+.logo {
+    height: 100px; /* Made the logo even bigger */
+}
+
+
+/* Wrapper for nav & button */
+.navContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Navigation styling */
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Navigation links */
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: #ffcc00;
+}
+
+/* Small and properly aligned Sign-Up button */
+.signUp {
+    background: #ffcc00;
+    color: black;
+    border: none;
+    padding: 5px 12px; /* Reduced padding */
+    font-size: 13px; /* Reduced font size */
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.signUp:hover {
+    background: #e6b800;
+}

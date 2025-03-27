@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* Main Container */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Uploading Container */
+/* Uploading Container */
+.container {
+    background: #ffffff; /* Changed from transparent to white */
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 170px;
+    animation: slideInFromLeft 0.8s ease-out;
+}
+
+
+/* Upload Options */
+.uploadOptions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    animation: slideInFromBottom 0.8s ease-out;
+}
+
+.uploadBox {
+    position: relative;
+    border: 2px dashed #ff8c00;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1;
+}
+
+/* Hover Effect */
+.uploadBox:hover {
+    background: rgba(255, 100, 50, 0.15);
+    transform: scale(1.05);
+}
+
+.uploadBox input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.uploadIcon {
+    font-size: 30px;
+    color: #639ee7;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.uploadText {
+    font-size: 14px;
+    color: #444;
+    margin-top: 5px;
+}
+
+/* Preview Section */
+.previewContainer {
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.preview {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 2px solid #ff8c00;
+    transition: transform 0.3s ease-in-out;
+}
+
+.preview:hover {
+    transform: scale(1.05);
+}
+
+/* Analyze Button */
+.analyzeBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #d19112;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.analyzeBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.analyzeBtn:hover:not(:disabled) {
+    background: #e67300;
+    transform: scale(1.1);
+}
+
+/* Instructions Section */
+.instructions {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background: #ccc;
+    margin: 15px 0;
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    animation: popIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.closeBtn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #666;
+    transition: color 0.2s ease;
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeBtn:hover {
+    color: #222;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transform: scale(1.2);
+}
+
+/* Results */
+.resultsContainer {
+    margin-top: 15px;
+    text-align: left;
+    animation: slideInFromBottom 0.8s ease-out;
+}
+
+.resultItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.checkIcon {
+    color: orange;
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.webcamWrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Grid Overlay */
+.gridOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    pointer-events: none; /* Prevent interaction */
+}
+
+.gridOverlay div {
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Light white lines */
+    transition: border-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .gridOverlay.highlight div {
+    border-color: #00ff00 !important; /* Force apply green border */
+  }
+  
+.faceGuide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Adjust based on preview size */
+    height: 65%;
+    border: 3px dashed rgba(255, 255, 255, 0.8); /* Dashed white outline */
+    border-radius: 50%; /* Makes it an oval */
+    background: rgba(255, 255, 255, 0.1); /* Lightly visible */
+    pointer-events: none; /* Ensure clicks pass through */
+  }
+  /* Background Wrapper */
+.backgroundWrapper {
+    background-image: url('/public/images/bbgg3.png'); /* Specify your background image URL here */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensures the background stays behind all other content */
+}
+.circleOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%; /* Adjust width to make it vertically oval */
+    height: 60%; /* Adjust height to make it vertically oval */
+    border-radius: 50%; /* This will make it an oval shape */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .circleOverlay.highlight {
+    border-color: #00ff00; /* Green color for highlight */
+    box-shadow: 0 0 20px #00ff00; /* Glow effect */
+  }
+  /* Blur effect for the background */
+  
+  /* Countdown display */
+  .countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    z-index: 10;
+  }

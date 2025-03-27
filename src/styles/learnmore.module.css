@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* Container */
+.container {
+  max-width: 100px;
+  margin: 5px auto;
+  padding: 30px;
+  font-family: 'Montserrat', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 260px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Scale-up effect */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1500px;
+  margin: 5px auto;
+  padding: 30px;
+  font-family: 'Montserrat', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+  background: rgba(255, 236, 210, 0.8); /* Light peach color with 80% opacity */
+  color: #333;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 260px;
+  backdrop-filter: blur(px); /* Optional: Adds a blur effect for a frosted-glass look */
+}
+
+/* Titles */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e67300;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: slideInRight 1s ease-out;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* List Styling */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  animation: scaleUp 0.8s ease-in-out;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+  background: #fff6e5;
+  color: #333;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.list li:hover {
+  transform: scale(1.05);
+  background: #ffd699;
+}
+
+/* Icons */
+.icon {
+  font-size: 1.5rem;
+  color: #e67300;
+  margin-right: 15px;
+}
+
+/* Text */
+.text {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Skin Tones Section */
+.skinTonesSection {
+  margin-top: 50px;
+  text-align: center;
+  animation: slideInRight 1s ease-in-out;
+}
+
+.skinToneTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e67300;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Skin Tone Labels and Description */
+.skinToneLabel {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e67300;
+  margin-bottom: 10px;
+}
+
+.skinToneDescription {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Grid */
+.skinToneGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.skinToneGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Skin Tone Cards */
+.skinToneCard {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #ffcc80;
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  animation: scaleUp 0.8s ease-in-out;
+}
+
+.skinToneCard:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.skinToneImage {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Titles */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e67300;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: slideInDown 1s ease-out;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* List Styling */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+  background: #fff6e5;
+  color: #333;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.list li:hover {
+  transform: scale(1.05);
+  background: #ffd699;
+}
+
+/* Icons */
+.icon {
+  font-size: 1.5rem;
+  color: #e67300;
+  margin-right: 15px;
+}
+
+/* Text */
+.text {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Skin Tones Section */
+.skinTonesSection {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.skinToneTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e67300;
+  margin-bottom: 30px;
+  animation: slideInUp 1s ease-out;
+}
+
+/* Skin Tone Labels and Description */
+.skinToneLabel {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e67300;
+  margin-bottom: 10px;
+}
+
+.skinToneDescription {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Grid */
+.skinToneGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+.skinToneGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Skin Tone Cards */
+.skinToneCard {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #ffcc80;
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.skinToneCard:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.skinToneImage {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  animation: fadeIn 1s ease-in-out;
+}

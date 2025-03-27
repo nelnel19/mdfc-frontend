@@ -1,0 +1,114 @@
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Table container with a light orange gradient */
+.tableContainer {
+    background: linear-gradient(135deg, #FFD89B, #FFB06A, #FF9F45); /* Light Orange Gradient */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 125px;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.6s ease-in-out forwards;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out 0.3s forwards;
+}
+
+/* Table Header & Cell */
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #fff5e1; /* Lightened table header */
+}
+
+/* Row animations */
+.table tr {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.6s ease-in-out forwards;
+}
+
+/* Staggered fade-in effect */
+.table tr:nth-child(1) { animation-delay: 0.2s; }
+.table tr:nth-child(2) { animation-delay: 0.3s; }
+.table tr:nth-child(3) { animation-delay: 0.4s; }
+.table tr:nth-child(4) { animation-delay: 0.5s; }
+
+/* Hover effect */
+.table tr:hover {
+    background: rgba(255, 183, 77, 0.3); /* Soft orange on hover */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Profile Image */
+.profileImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profileImage:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tableContainer {
+        width: 95%;
+    }
+}

@@ -1,0 +1,174 @@
+/* Sidebar Container */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    background: linear-gradient(
+        rgba(255, 204, 153, 0.3),
+        rgba(255, 178, 102, 0.3),
+        rgba(255, 153, 51, 0.3)
+    );
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+}
+
+/* Logo */
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+/* Sidebar Content */
+.sidebarContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* User Info (Profile Image & Username) */
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profileImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e67e22;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+}
+
+/* Add a moving welcome icon (FontAwesome) */
+.welcomeIcon {
+    font-size: 20px; /* Larger font size for better visibility */
+    font-family: 'Arial', sans-serif; /* Default sans-serif font */
+    font-weight: 700; /* Bold font */
+    color: #713b0b; /* Set the text color to orange */
+    text-transform: uppercase; /* Capitalize the text */
+    letter-spacing: 2px; /* Add spacing between letters */
+    animation: moveIcon 2s infinite ease-in-out;
+    margin-bottom: 20px;
+}
+
+/* Animation for moving the icon */
+@keyframes moveIcon {
+    0% {
+        transform: translateX(0); /* Start at normal position */
+    }
+    50% {
+        transform: translateX(10px); /* Move right */
+    }
+    100% {
+        transform: translateX(0); /* Return to normal position */
+    }
+}
+
+/* Navigation List */
+.navList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.navList li {
+    width: 100%;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+.navList li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Highlight active link */
+.navList li.active {
+    background: rgba(255, 140, 0, 0.8); /* Stronger Orange */
+    border-left: 5px solid #e67e22; /* Orange border */
+    font-weight: bold;
+}
+
+.navList li.active a {
+    color: white;
+}
+
+/* Add hover effect to icons */
+.navList li a i {
+    font-size: 18px;
+    color: black;
+    transition: transform 0.3s ease-in-out; /* Animation on hover */
+}
+
+.navList li a:hover i {
+    transform: scale(1.2); /* Scale up the icon */
+    color: #e67e22; /* Orange color when hovered */
+}
+
+.navList li:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* My Account Section at Bottom */
+.accountNav {
+    margin-top: auto;  /* Push to the bottom */
+    list-style: none;
+    width: 100%;
+}
+
+.accountNav li {
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover effect on My Account item */
+.accountNav li:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.accountNav li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+}

@@ -1,0 +1,252 @@
+.pageContainer {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/public/images/bbgg3.png') no-repeat center center/cover; /* Background Image */
+}
+
+/* General Container Styles */
+.container {
+    max-width: 600px; /* Increased width */
+    margin: auto;
+    padding: 20px; /* Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background: #fff8f2;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin-left: 580px; /* Adjusted position */
+    height: auto; /* Allow height to adjust dynamically */
+}
+
+
+/* Rest of your styles remain unchanged */
+
+
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #d76a03; /* Warm orange */
+    font-weight: 600;
+}
+
+/* Form Styling */
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Labels */
+.container label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #c05b00; /* Deep orange */
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+/* Select and Input */
+.container select,
+.container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ffb680; /* Soft orange border */
+    background: #ffedd5; /* Light peach background */
+    transition: all 0.3s ease;
+}
+
+/* Select Dropdown */
+.container select {
+    cursor: pointer;
+}
+
+.container select:focus {
+    border-color: #ff8c42; /* Bright orange focus */
+    outline: none;
+}
+
+/* Checkbox Group */
+.container .checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.container .checkboxGroup div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .checkboxGroup input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Button */
+.container button {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #ffa057, #ff7b00);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 100, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.container button:hover {
+    background: linear-gradient(135deg, #ff7b00, #d46300);
+    transform: translateY(-2px);
+}
+
+/* MODAL Styling */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 150, 50, 0.5); /* Light orange overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.modal {
+    background: #fff8f0;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(255, 127, 0, 0.3);
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    text-align: center;
+    position: relative;
+    animation: scaleUp 0.3s ease-in-out;
+    overflow-y: auto;
+    font-family: 'Poppins', sans-serif; /* Google Font scoped only inside modal */
+}
+
+/* Close Button */
+.modal .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #b85400; /* Deep orange */
+    transition: all 0.3s ease;
+}
+
+.modal .closeButton:hover {
+    color: #ff4500;
+    transform: scale(1.2);
+}
+
+/* Modal Titles & Text */
+.modal h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #d76a03;
+}
+
+.modal h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #b85600;
+}
+
+.modal ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.modal ul li {
+    font-size: 1rem;
+    color: #874c00;
+    padding: 5px 0;
+}
+
+/* Condition Section */
+.modal .condition-section {
+    background: #ffe1c4; /* Light orange-peach */
+    border-left: 5px solid #ff7b00; /* Orange highlight */
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Divider */
+.modal .condition-section::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ff7b00;
+    margin-bottom: 10px;
+}
+
+/* Condition Text */
+.modal .condition-text {
+    color: #b85600; /* Deep orange */
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Image Grid */
+.modal .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal .images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.modal .images img:hover {
+    transform: scale(1.1);
+}
+
+/* FADE & SCALE ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}

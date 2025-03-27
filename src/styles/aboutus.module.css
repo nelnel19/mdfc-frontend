@@ -1,0 +1,264 @@
+/* Apply shared background to all sections */
+.pageBackground {
+    width: 100%;
+    min-height: 100vh; /* Allows scrolling */
+    background: url('/public/images/bg10.png') center/cover no-repeat fixed; /* Fixed background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Remove background from .container */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 80px;
+}
+
+/* Semi-transparent overlay */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Transparent Box (for both sections) */
+.transparentBox {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 12px;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Text Styling */
+.textContent {
+    text-align: left;
+    color: #fff;
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.subHeading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffebcd;
+    margin-top: 20px;
+}
+
+.description {
+    font-size: 16px;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+/* Mission & Vision Section */
+.missionVisionContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 50px;
+    position: relative;
+}
+
+/* Dark transparent background for Mission & Vision */
+.missionVisionContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark transparent box for Mission & Vision */
+.missionVisionBox {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 12px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Headings */
+.missionHeading, .visionHeading, .commitmentHeading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffebcd;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.missionText, .visionText, .commitmentText {
+    font-size: 18px;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+/* Moving Icons */
+.scrollEffect {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+.scrollEffect .icon {
+    animation: moveIcons 3s infinite alternate ease-in-out;
+  
+}
+
+/* Keyframes for Moving Icons */
+@keyframes moveIcons {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+/* Team Section */
+/* Team Section */
+.teamContainer {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.teamHeading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff; /* Change heading text to white */
+    margin-bottom: 20px;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.teamMember {
+    background: rgba(0, 0, 0, 0.6); /* Darker transparent background */
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.teamMember:hover {
+    transform: scale(1.05);
+}
+
+.teamInfo {
+    color: #fff;
+}
+
+.memberImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #ffebcd;
+}
+
+.memberName {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff; /* Change team member names to white */
+    margin-bottom: 5px;
+}
+
+.memberRole {
+    font-size: 16px;
+    color: #ffebcd;
+    margin-bottom: 10px;
+}
+
+.facebookIcon {
+    font-size: 24px;
+    color: #1877F2;
+    transition: color 0.3s;
+}
+
+.facebookIcon:hover {
+    color: #ffffff;
+}
+/* Ensure feature text is white */
+.featureText {
+    color: rgb(241, 206, 206) !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* Professor Section */
+.professorContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.professorBox {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    padding: 30px;
+    border-radius: 12px;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.professorImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffebcd;
+}
+
+.professorInfo {
+    text-align: left;
+}
+
+.professorName {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.professorRole {
+    font-size: 20px;
+    color: #ffebcd;
+    margin-bottom: 15px;
+}
+
+

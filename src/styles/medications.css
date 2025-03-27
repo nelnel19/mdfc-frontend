@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Modal Overlay */
+.medication-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Modal Box */
+.medication-modal {
+    background: rgba(255, 255, 255, 0.85); /* Softer glassmorphism effect */
+    backdrop-filter: blur(14px); /* Stronger blur */
+    padding: 35px;
+    border-radius: 18px;
+    max-width: 720px;
+    width: 90%;
+    min-height: 420px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    animation: scaleUp 0.4s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.medication-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #e67e22;
+    padding-bottom: 12px;
+    margin-bottom: 22px;
+}
+
+/* Title */
+.medication-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+/* Close Button */
+.medication-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #444;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.medication-close:hover {
+    transform: scale(1.2);
+    color: #e74c3c;
+}
+
+/* Modal Content Layout */
+.medication-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+/* Centered Description & Tips */
+.medication-content {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.medication-content p {
+    font-size: 16px;
+    color: #34495e;
+    font-weight: 400;
+}
+
+/* Medication Details Section */
+.medication-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* Section Titles */
+.medication-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* Centered List */
+.medication-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.medication-section ul li {
+    background: rgba(255, 140, 0, 0.12);
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #2c3e50;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 80%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.medication-section ul li:hover {
+    background: rgba(255, 140, 0, 0.25);
+    transform: scale(1.05);
+}
+
+/* Related Images Grid */
+.medication-image-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+/* Image Styling */
+.medication-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    border: 2.5px solid #e67e22;
+}
+
+.medication-image:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .medication-modal {
+        max-width: 95%;
+        min-height: auto;
+        padding: 28px;
+    }
+
+    .medication-content {
+        width: 100%;
+    }
+
+    .medication-section ul li {
+        width: 100%;
+    }
+
+    .medication-image {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.85);
+    }
+    to {
+        transform: scale(1);
+    }
+}

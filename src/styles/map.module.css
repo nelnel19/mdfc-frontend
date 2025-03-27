@@ -1,0 +1,97 @@
+/* Background Wrapper - Only Affects This Component */
+.backgroundWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('/public/images/bbgg3.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; /* Ensures other components appear on top */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    height: 90vh;
+    width: 90vw;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1;
+    margin-left: 350px;
+}
+
+/* Map and Sidebar Glassmorphism */
+.mapContainer, .details {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Map Styling */
+.mapContainer {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.map {
+    width: 100%;
+    height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Details Panel */
+.details {
+    width: 35%;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+    padding: 20px;
+    overflow-y: auto;
+    border-left: 2px solid #ffa07a;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Title & List Styling */
+.details .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff6347;
+    border-bottom: 2px solid #ff6347;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.details .listItem {
+    background: #ffa07a;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.details .listItem:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+/* Clickable Address */
+.clickableAddress {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+  
+  .clickableAddress:hover {
+    color: #0056b3;
+  }

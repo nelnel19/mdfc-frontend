@@ -1,0 +1,336 @@
+/* Container with Space from Screen */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f5f5f5;
+
+    /* Fade-in Effect */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Keyframe for Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inner Box with Slight Margin */
+.auth-wrapper {
+    display: flex;
+    width: 80%;
+    max-width: 1100px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Slide-in effect for inner box */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Left Section (Form) */
+.auth-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #e53935;
+    box-shadow: 0 0 8px rgba(229, 57, 53, 0.3);
+}
+
+.input-group-text {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: #555;
+    padding-left: 15px;
+}
+
+/* Gender Dropdown */
+select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+    border-color: #e53935;
+    box-shadow: 0 0 8px rgba(229, 57, 53, 0.3);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Signup Link */
+.signup-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #e53935;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: #d32f2f;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms-content {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px; /* Add space for scrollbar */
+}
+
+.terms-content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.terms-content ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.terms-content li {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.terms-content li strong {
+    color: #333;
+}
+
+.terms-agreement {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.terms-agreement label {
+    font-size: 14px;
+    color: #555;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.terms-agreement input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #e53935; /* Custom checkbox color */
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Adds space between buttons */
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.modal-buttons button:first-child {
+    background: #e53935;
+    color: #fff;
+}
+
+.modal-buttons button:first-child:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.modal-buttons button:first-child:hover:not(:disabled) {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
+
+.modal-buttons button:last-child {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.modal-buttons button:last-child:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Right Section (Image and Gradient) */
+.auth-image {
+    width: 50%;
+    background: linear-gradient(rgba(255, 183, 77, 0.6), rgba(255, 152, 0, 0.6)), 
+                url('/public/images/logreg2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.auth-image-content {
+    max-width: 400px;
+    padding: 20px;
+}
+
+.auth-image h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.auth-image p {
+    font-size: 16px;
+    line-height: 1.6;
+    animation: fadeIn 1.4s ease-out forwards;
+}
+/* Admin Info */
+.adminInfo {
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4A2C0A; /* Dark Brown */
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  }
+  

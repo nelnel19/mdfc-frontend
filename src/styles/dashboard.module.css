@@ -1,0 +1,307 @@
+/* Outer background (kept simple for contrast) */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4; /* Light gray or white */
+    padding: 40px 20px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+    transform: scale(0.9); /* Zoom out to 80% */
+    transform-origin: top center; /* Adjust the origin point for scaling */
+    width: 125%; /* Compensate for the scaling to avoid overflow */
+    margin-left: -12.5%; /* Adjust margin to center the scaled content */
+}
+
+/* Dashboard container now has the gradient */
+.dashboardContainer {
+    background: linear-gradient(to right, #FFD89B, #FFB06A, #FF9F45); /* Light Orange Gradient */
+    border-radius: 20px;
+    padding: 40px; /* Slightly more padding for spacing */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 95%; /* Increased width */
+    width: 95%;
+    text-align: center;
+    margin-top: 40px;
+    transform: scale(0.95); /* Less zoom-in effect */
+    opacity: 0;
+    animation: slideUp 0.8s ease-in-out 0.2s forwards;
+}
+
+/* Logo Section */
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 180px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Charts Container */
+.chartsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space evenly */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Gap between charts */
+}
+
+/* Chart Cards */
+.chartCard {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease-in-out;
+    width: calc(33.33% - 14px); /* Three charts per row with gap */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-in-out 0.4s forwards;
+}
+
+.chartCard:hover {
+    transform: scale(1.05);
+}
+
+.chartCard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #4A2C0A; /* Dark Brown for better contrast */
+}
+
+/* No Data Message */
+.noData {
+    font-size: 1.2rem;
+    color: #4A2C0A; /* Dark Brown for better visibility */
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .chartCard {
+        width: calc(50% - 10px); /* Two charts per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .chartCard {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(0.95);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboardContainer {
+        width: 98%;
+        transform: scale(1); /* No zoom effect on smaller screens */
+    }
+
+    .chartCard {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+.searchContainer {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.searchInput {
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/* Full-width chart card */
+/* Full-width chart card */
+/* Full-width chart card */
+.fullWidth {
+    width: 100% !important; /* Override the default width */
+    margin-top: 20px; /* Add some spacing */
+}
+
+/* Adjust chart container height */
+.recharts-wrapper {
+    overflow: visible; /* Ensure labels are not cut off */
+}
+
+/* X-axis labels */
+.recharts-x-axis .recharts-cartesian-axis-tick {
+    white-space: nowrap; /* Prevent text wrapping */
+}
+/* User Email Table */
+.userEmailTable {
+    max-height: 400px; /* Limit height for scrollability */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 10px;
+}
+
+.userEmailTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.userEmailTable th,
+.userEmailTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.userEmailTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.userEmailTable tr:hover {
+    background-color: #f9f9f9;
+}
+.analysisSection {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.analysisSection h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.analysisSection h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.analysisSection p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.analysisSection ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.analysisSection ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.analysisTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.analysisTable th,
+.analysisTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.analysisTable th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+}
+
+.analysisTable td {
+    color: #555;
+}
+.analysisSection {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.analysisText {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.analysisText p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.analysisTable {
+    overflow-x: auto;
+}
+
+.analysisTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.analysisTable th,
+.analysisTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.analysisTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.analysisTable tr:hover {
+    background-color: #f9f9f9;
+}
