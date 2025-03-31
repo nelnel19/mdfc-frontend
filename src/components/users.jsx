@@ -22,7 +22,7 @@ const Users = () => {
   // Fetch all users from the backend
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:8000/users");
+      const response = await fetch("https://mdfc.onrender.com/users");
       const data = await response.json();
       console.log("API Response:", data); // Debugging: Log the API response
 
@@ -108,7 +108,7 @@ const Users = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/users/${editingUser.email}`,
+        `https://mdfc.onrender.com/users/${editingUser.email}`,
         {
           method: "PUT",
           body: formDataToSend,
@@ -131,7 +131,7 @@ const Users = () => {
   const handleArchive = async (email) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/users/${email}/archive`,
+        `https://mdfc.onrender.com/users/${email}/archive`,
         {
           method: "PUT",
         }
@@ -153,7 +153,7 @@ const Users = () => {
   const handleDeactivate = async (email) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/users/${email}/deactivate`,
+        `https://mdfc.onrender.com/users/${email}/deactivate`,
         {
           method: "PUT",
         }
@@ -175,7 +175,7 @@ const Users = () => {
   const handleReactivate = async (email) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/users/${email}/reactivate`,
+        `https://mdfc.onrender.com/users/${email}/reactivate`,
         {
           method: "PUT",
         }

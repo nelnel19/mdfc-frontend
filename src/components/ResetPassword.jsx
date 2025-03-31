@@ -39,7 +39,7 @@ const ResetPassword = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/reset-password', {
+      const response = await fetch('https://mdfc.onrender.com/reset-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, token, new_password: password }),

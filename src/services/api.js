@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000'; // Your FastAPI URL
+const API_URL = 'https://mdfc.onrender.com'; // Your FastAPI URL
 
 export const registerUser = async (userData) => {
   try {

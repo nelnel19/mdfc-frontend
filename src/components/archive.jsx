@@ -11,7 +11,7 @@ const Archive = () => {
 
   const fetchArchivedUsers = async () => {
     try {
-      const response = await fetch("http://localhost:8000/users");
+      const response = await fetch("https://mdfc.onrender.com/users");
       const data = await response.json();
       const archived = data.users.filter((user) => user.status === "archived");
       setArchivedUsers(archived);

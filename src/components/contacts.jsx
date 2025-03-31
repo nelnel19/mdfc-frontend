@@ -27,7 +27,7 @@ const Contacts = () => {
     setStatus({ success: false, message: "" });
 
     try {
-      await axios.post("http://localhost:8000/feedback", formData);
+      await axios.post("https://mdfc.onrender.com/feedback", formData);
       setStatus({ success: true, message: "Thank you for your feedback!" });
       setFormData((prev) => ({ ...prev, message: "" })); // Clear only the message field
     } catch (error) {
@@ -39,7 +39,7 @@ const Contacts = () => {
   const handleReply = async (feedbackId, replyMessage) => {
     try {
       // Send the reply to the backend (you need to implement this endpoint)
-      await axios.post(`http://localhost:8000/feedback/${feedbackId}/reply`, {
+      await axios.post(`https://mdfc.onrender.com/feedback/${feedbackId}/reply`, {
         reply: replyMessage,
       });
       setReplies((prev) => ({ ...prev, [feedbackId]: replyMessage }));

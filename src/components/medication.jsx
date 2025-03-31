@@ -30,7 +30,7 @@ const Medication = () => {
     }
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/medications/", formData, {
+      const response = await axios.post("https://mdfc.onrender.com/medications/", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Medication added successfully!");

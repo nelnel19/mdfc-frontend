@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const fetchCounts = async () => {
     try {
-      const response = await fetch("http://localhost:8000/users");
+      const response = await fetch("https://mdfc.onrender.com/users");
       const data = await response.json();
 
       // Filter out users with the role of "admin"
@@ -42,7 +42,7 @@ const Navbar = () => {
     }
 
     try {
-      const feedbackResponse = await fetch("http://localhost:8000/feedbacks");
+      const feedbackResponse = await fetch("https://mdfc.onrender.com/feedbacks");
       const feedbackData = await feedbackResponse.json();
       setFeedbacksCount(feedbackData.feedbacks.length);
     } catch (error) {

@@ -20,7 +20,7 @@ const Comments = () => {
 
   const fetchReplies = async (email) => {
     try {
-      const response = await axios.get(`http://localhost:8000/feedbacks?email=${email}`);
+      const response = await axios.get(`https://mdfc.onrender.com/feedbacks?email=${email}`);
       const userFeedbacks = response.data.feedbacks.filter((feedback) => feedback.reply);
       setReplies(userFeedbacks);
     } catch (error) {
@@ -38,7 +38,7 @@ const Comments = () => {
     setStatus({ success: false, message: "" });
 
     try {
-      await axios.post("http://localhost:8000/feedback", formData);
+      await axios.post("https://mdfc.onrender.com/feedback", formData);
       setStatus({ success: true, message: "Thank you for your feedback!" });
       setFormData((prev) => ({ ...prev, message: "" })); // Clear only the message field
       fetchReplies(formData.email);

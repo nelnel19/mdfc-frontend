@@ -53,7 +53,7 @@ const Skincare = () => {
         }
 
         try {
-            const response = await axios.post("http://127.0.0.1:8000/skincare/", formData, {
+            const response = await axios.post("https://mdfc.onrender.com/skincare/", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
 

@@ -24,7 +24,7 @@ const Account = () => {
     }
 
     axios
-      .get(`http://localhost:8000/users/${loggedInUserEmail}`)
+      .get(`https://mdfc.onrender.com/users/${loggedInUserEmail}`)
       .then((response) => {
         setUser(response.data);
         setFormData({
@@ -56,7 +56,7 @@ const Account = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8000/users/${loggedInUserEmail}`,
+        `https://mdfc.onrender.com/users/${loggedInUserEmail}`,
         formDataToSend
       );
       alert(response.data.message);

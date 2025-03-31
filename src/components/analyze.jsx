@@ -184,12 +184,12 @@ const Analyze = () => {
     }
 
     try {
-      const analyzeRes = await fetch("http://localhost:8000/analyze/", {
+      const analyzeRes = await fetch("https://mdfc.onrender.com/analyze/", {
         method: "POST",
         body: formData,
       }).then((res) => res.json());
 
-      const detectRes = await fetch("http://localhost:8000/detect/", {
+      const detectRes = await fetch("https://mdfc.onrender.com/detect/", {
         method: "POST",
         body: formData,
       }).then((res) => res.json());
@@ -220,7 +220,7 @@ const Analyze = () => {
       formData.append("analysis", JSON.stringify(formattedResult));
       formData.append("email", email);
 
-      const response = await fetch("http://localhost:8000/save-result", {
+      const response = await fetch("https://mdfc.onrender.com/save-result", {
         method: "POST",
         body: formData,
       });
