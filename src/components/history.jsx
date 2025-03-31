@@ -31,7 +31,7 @@ const History = () => {
           return;
         }
 
-        const response = await axios.get("https://mdfc.onrender.com/results");
+        const response = await axios.get("https://medifacecare.onrender.com/results");
         const userResults = response.data.results.filter(res => res.email === userEmail);
 
         if (userResults.length === 0) {
@@ -51,7 +51,7 @@ const History = () => {
         const userEmail = localStorage.getItem("lastLoggedInUser");
         if (!userEmail) return;
 
-        const response = await axios.get(`https://mdfc.onrender.com/user_medications/${userEmail}`);
+        const response = await axios.get(`https://medifacecare.onrender.com/user_medications/${userEmail}`);
         setMedications(response.data.length > 0 ? response.data : []);
       } catch (error) {
         console.error("Error fetching medications:", error);
@@ -64,7 +64,7 @@ const History = () => {
         const userEmail = localStorage.getItem("lastLoggedInUser");
         if (!userEmail) return;
     
-        const response = await axios.get(`https://mdfc.onrender.com/get_skincare/${userEmail}`);
+        const response = await axios.get(`https://medifacecare.onrender.com/get_skincare/${userEmail}`);
         setSkincareRoutine(Array.isArray(response.data) ? response.data : []);
       } catch (error) {
         console.error("Error fetching skincare routine:", error);

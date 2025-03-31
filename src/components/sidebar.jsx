@@ -32,7 +32,7 @@ const Sidebar = () => {
         setUsername(parsedUser.username || parsedUser.email.split("@")[0]);
 
         // Fetch user details (Cloudinary image URL)
-        const response = await fetch(`http://localhost:8000/users/${parsedUser.email}`);
+        const response = await fetch(`https://medifacecare.onrender.com/users/${parsedUser.email}`);
         if (!response.ok) throw new Error("User not found");
 
         const userData = await response.json();

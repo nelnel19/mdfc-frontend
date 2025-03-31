@@ -35,7 +35,7 @@ const SkincareForm = () => {
     setRecommendations([]);
 
     try {
-      const response = await fetch("https://mdfc.onrender.com/skincares/");
+      const response = await fetch("https://medifacecare.onrender.com/skincares/");
       if (!response.ok) throw new Error("Failed to fetch data");
 
       const data = await response.json();
@@ -85,7 +85,7 @@ const SkincareForm = () => {
     };
 
     try {
-      const response = await fetch("https://mdfc.onrender.com/save_skincare/", {
+      const response = await fetch("https://medifacecare.onrender.com/save_skincare/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

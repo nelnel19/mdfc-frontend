@@ -14,7 +14,7 @@ const Feedbacks = () => {
 
   const fetchFeedbacks = async () => {
     try {
-      const response = await axios.get("https://mdfc.onrender.com/feedbacks");
+      const response = await axios.get("https://medifacecare.onrender.com/feedbacks");
       setFeedbacks(response.data.feedbacks);
     } catch (error) {
       console.error("Error fetching feedbacks:", error);
@@ -29,7 +29,7 @@ const Feedbacks = () => {
   
     try {
       const response = await axios.post(
-        `https://mdfc.onrender.com/feedback/${feedbackId}/reply`, // Corrected API URL
+        `https://medifacecare.onrender.com/feedback/${feedbackId}/reply`, // Corrected API URL
         { reply: replyMessage }, // Correct payload format
         {
           headers: {

@@ -12,7 +12,7 @@ const Dashboard = () => {
     const [medications, setMedications] = useState([]);
     const [skincareRoutines, setSkincareRoutines] = useState([]);
 
-    const API_BASE = "https://mdfc.onrender.com";
+    const API_BASE = "https://medifacecare.onrender.com";
 
     useEffect(() => {
         const fetchData = async () => {
