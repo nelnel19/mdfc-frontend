@@ -184,12 +184,12 @@ const Analyze = () => {
     }
 
     try {
-      const analyzeRes = await fetch("http://localhost:8001/analyze/", {
+      const analyzeRes = await fetch("http://localhost:8000/analyze/", {
         method: "POST",
         body: formData,
       }).then((res) => res.json());
 
-      const detectRes = await fetch("http://localhost:8001/detect/", {
+      const detectRes = await fetch("http://localhost:8000/detect/", {
         method: "POST",
         body: formData,
       }).then((res) => res.json());

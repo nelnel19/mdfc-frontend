@@ -33,7 +33,7 @@ const Generator = () => {
     formData.append("file", image);
 
     try {
-      const predictRes = await fetch("http://localhost:8001/predict/", {
+      const predictRes = await fetch("http://localhost:8000/predict/", {
         method: "POST",
         body: formData,
       }).then((res) => res.json());
